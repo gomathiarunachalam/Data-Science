@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 import pymongo
 from pymongo import MongoClient
-from PIL import Image
+from PIL import Image #Python Imaging Library
 from datetime import date
 import json
 
@@ -24,7 +24,7 @@ st.title('_:green[Twitter Scraper]_')
 #Creating the empty list to add the data
 twt_list = []
 
-# Menus used in Twitter Scrape web app -- 5 menus are used
+# Menus used in Twitter Scrape web app -- 3 menus are used
 choice = st.sidebar.selectbox('Menu',["Search","Display","Download"])
 
 
@@ -76,7 +76,7 @@ elif choice=="Display":
     #Dispaly the document
     st.dataframe(df2)
 
-# Menu 5 is for Downloading the scraped data as CSV or JSON
+# Menu 3 is for Downloading the scraped data as CSV or JSON
 else:
    col1, col2 = st.columns(2)
 
