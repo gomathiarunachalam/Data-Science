@@ -14,8 +14,8 @@ import json
 
 # Mongodb client connection is done
 client = MongoClient("mongodb://localhost:27017/")
-db = client.twitter_Scrape
-record = db.Scrapped_data
+db = client.twitter_Scrape  #Database name
+record = db.Scrapped_data   #collection name
 
 
 st.title('_:green[Twitter Scraper]_')
@@ -48,7 +48,7 @@ if choice=="Search":
     #Getting text to search from user and scrap the tweets using snscrap
     if item in items:
         search_text = st.text_input('Enter the text:')
-        date_range = ' since:'+d1.strftime("%Y-%m-%d")+' until:'+d2.strftime("%Y-%m-%d")
+        date_range = ' since:'+d1.strftime("%Y-%m-%d")+' until:'+d2.strftime("%Y-%m-%d") #strftime--->convertion of string to time
         query= search_text+date_range
         number = st.number_input('Enter the number of tweets you wanted to scrape',1,1000)
         st.write(query)
