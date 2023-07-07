@@ -1,6 +1,6 @@
-# pip install snscrape
-# pip install streamlit
-# pip install pymongo
+# !pip install snscrape
+# !pip install streamlit
+# !pip install pymongo
 
 import datetime
 import snscrape.modules.twitter as sntwitter
